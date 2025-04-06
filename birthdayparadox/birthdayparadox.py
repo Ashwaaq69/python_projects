@@ -11,7 +11,19 @@ def getBirthdays(numberOfBirthdays):
         # The year is set to 2001 so that the birthdays are all in the same year.
         # This makes it easier to compare dates.
         startOfYear = datetime.date(2001, 1, 1)
+        # Get a random day into the year:
         randomNumberOfDays = datetime.timedelta(random.randint(0, 364))
         birthday = startOfYear + randomNumberOfDays
         birthdays.append(birthday)
     return birthdays
+
+def getMatch(birthdays):
+    """Returns the date object of a birthday that occurs more than once
+      in the birthdays list."""
+    if len(birthdays) == len(set(birthdays)):
+        return None # All birthdays are unique, so return None.
+    #compare each birthdate to every other birthday
+    for a, birthdayA in enumerate(birthdays):
+          for b, birthdayB in enumerate(birthdays[a + 1 :]):
+              if birthdayA == birthdayB:
+                  return birthdayA  # Return the matching birthday.
