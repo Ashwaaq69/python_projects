@@ -93,9 +93,9 @@ print('100,000 simulations run.')
   
   
   # Display simulation results:
-probability = round(simMatch / 100000 * 100, 2)
+probability = round(siMatch / 100000 * 100, 2)
 print('Out of 100,000 simulations of', numBDays, 'people, there was a')
-print('matching birthday in that group', simMatch, 'times. This means')
+print('matching birthday in that group', siMatch, 'times. This means')
 print('that', numBDays, 'people have a', probability, '% chance of')
 print('having a matching birthday in their group.')
 print('That\'s probably more than you would think!')     
