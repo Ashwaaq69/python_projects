@@ -8,7 +8,7 @@ def getBirthdays(numberOfBirthdays):
     """Returns a list of number random date objects for birthdays."""
     birthdays = []
     for i in range(numberOfBirthdays):
-        # The year is set to 2001 so that the birthdays are all in the same year.
+        # The year is set to 2002 so that the birthdays are all in the same year.
         # This makes it easier to compare dates.
         startOfYear = datetime.date(2002, 8, 19)
         # Get a random day into the year:
