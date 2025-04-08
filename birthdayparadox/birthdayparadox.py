@@ -51,3 +51,16 @@ while True:
          break  # User has entered a valid amount.
 print()
 
+#Generate and display the birthdays:
+print('Here are', numBDays, 'birthdays:')
+birthdays = getBirthdays(numBDays)
+for i, birthday in enumerate(birthdays):
+    if i != 0:
+        print(', ', end='')
+    monthName = MONTHS[birthday.month - 1]
+    dateText = f'{monthName} {birthday.day}'
+    print(dateText, end='')
+print()
+print()
+
+    
